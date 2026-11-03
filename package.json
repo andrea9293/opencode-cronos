@@ -1,13 +1,12 @@
 {
   "name": "opencode-scheduler",
-  "version": "2.0.0",
+  "version": "1.3.0",
   "description": "OpenCode plugin for scheduling recurring jobs using launchd, systemd, Task Scheduler, or cron fallback",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
-    "dist",
-    "index.js"
+    "dist"
   ],
   "exports": {
     ".": {
@@ -16,9 +15,10 @@
     }
   },
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js && tsc --emitDeclarationOnly",
+    "build": "bun build src/index.ts --outdir dist --target bun --format esm && tsc --emitDeclarationOnly",
     "clean": "rm -rf dist",
-    "prepublishOnly": "npm run clean && npm run build",
+    "test": "bun test",
+    "prepublishOnly": "bun run clean && bun run build",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
@@ -45,14 +45,13 @@
   },
   "homepage": "https://github.com/different-ai/opencode-scheduler#readme",
   "dependencies": {
-    "@opencode/plugin": "^2.0.26"
+    "@opencode-ai/plugin": "^1.0.162"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "esbuild": "^0.25.0",
+    "bun-types": "latest",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "@opencode/plugin": ">=2.0.0"
+    "@opencode-ai/plugin": ">=1.0.0"
   }
 }
