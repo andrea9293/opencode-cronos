@@ -40,3 +40,18 @@ import distPlugin from "../dist/index.js"
 test("committed dist is not stale", () => {
   expect(distPlugin.id).toBe(plugin.id)
 })
+
+describe("attribution", () => {
+  const license = readFileSync(join(root, "LICENSE"), "utf8")
+  const readme = readFileSync(join(root, "README.md"), "utf8")
+
+  test("LICENSE keeps the upstream copyright", () => {
+    expect(license).toContain("Copyright (c) 2025 Different AI")
+    expect(license).toContain("Copyright (c) 2026 Andrea Bravaccino")
+  })
+
+  test("README credits the upstream project", () => {
+    expect(readme).toContain("https://github.com/different-ai/opencode-scheduler")
+    expect(readme).toContain("Benjamin Shafii")
+  })
+})
