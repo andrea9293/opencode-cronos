@@ -34,3 +34,9 @@ import plugin from "../src/index"
 test("plugin id is cronos", () => {
   expect(plugin.id).toBe("cronos")
 })
+
+import distPlugin from "../dist/index.js"
+
+test("committed dist is not stale", () => {
+  expect(distPlugin.id).toBe(plugin.id)
+})
