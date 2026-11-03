@@ -575,7 +575,7 @@ function normalizeSkillName(name?: string): string {
   return SKILL_ALIASES[trimmed] ?? trimmed
 }
 
-function getBuiltinSkill(name?: string): BuiltinSkill | undefined {
+export function getBuiltinSkill(name?: string): BuiltinSkill | undefined {
   return BUILTIN_SKILLS[normalizeSkillName(name)]
 }
 
@@ -583,14 +583,10 @@ function listBuiltinSkills(): BuiltinSkill[] {
   return Object.values(BUILTIN_SKILLS)
 }
 
-function installBuiltinSkill(skill: BuiltinSkill, rootDir: string, overwrite = false): { directory: string; files: string[] } {
+export function installBuiltinSkill(skill: BuiltinSkill, rootDir: string, overwrite = false): { directory: string; files: string[] } {
   const installRoot = rootDir.trim()
   if (!installRoot) {
     throw new Error("Install directory cannot be empty.")
-  }
-
-  if (!existsSync(installRoot)) {
-    throw new Error(`Directory not found: ${installRoot}`)
   }
 
   const relativeDir = dirname(skill.suggestedPath)

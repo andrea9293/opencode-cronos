@@ -22852,9 +22852,6 @@ function installBuiltinSkill(skill, rootDir, overwrite = false) {
   if (!installRoot) {
     throw new Error("Install directory cannot be empty.");
   }
-  if (!existsSync(installRoot)) {
-    throw new Error(`Directory not found: ${installRoot}`);
-  }
   const relativeDir = dirname(skill.suggestedPath);
   const installDir = join2(installRoot, relativeDir);
   ensureDir(installDir);
@@ -25199,6 +25196,8 @@ var index_default = plugin_exports.define({
 });
 export {
   index_default as default,
+  getBuiltinSkill,
+  installBuiltinSkill,
   isMissingCrontabError,
   resolvePerlPath
 };
