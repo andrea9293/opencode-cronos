@@ -11,12 +11,12 @@
  * - Working directory support for MCP configs
  * - Environment variable injection (PATH for node/npx)
  */
-import type { Plugin } from "@opencode-ai/plugin";
+import { Plugin } from "@opencode/plugin";
 export declare function resolvePerlPath(options: {
     override?: string;
     whichPerl: () => string | null;
     fileExists: (path: string) => boolean;
 }): string;
 export declare function isMissingCrontabError(status: number | undefined, stderr: string): boolean;
-export declare const SchedulerPlugin: Plugin;
-export default SchedulerPlugin;
+declare const _default: Plugin.Plugin;
+export default _default;
