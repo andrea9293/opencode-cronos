@@ -1,6 +1,6 @@
 {
-  "name": "opencode-scheduler",
-  "version": "2.0.0",
+  "name": "cronos",
+  "version": "2.1.0",
   "description": "OpenCode plugin for scheduling recurring jobs using launchd, systemd, Task Scheduler, or cron fallback",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,16 +35,16 @@
     "automation",
     "jobs"
   ],
-  "author": "Benjamin Shafii",
+  "author": "Andrea Bravaccino",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/different-ai/opencode-scheduler.git"
+    "url": "git+https://github.com/andrea9293/cronos.git"
   },
   "bugs": {
-    "url": "https://github.com/different-ai/opencode-scheduler/issues"
+    "url": "https://github.com/andrea9293/cronos/issues"
   },
-  "homepage": "https://github.com/different-ai/opencode-scheduler#readme",
+  "homepage": "https://github.com/andrea9293/cronos#readme",
   "dependencies": {
     "@opencode/plugin": "^2.0.26"
   },
@@ -55,5 +55,11 @@
   },
   "peerDependencies": {
     "@opencode/plugin": ">=2.0.0"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Benjamin Shafii",
+      "url": "https://github.com/different-ai/opencode-scheduler"
+    }
+  ]
 }
