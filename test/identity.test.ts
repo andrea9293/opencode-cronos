@@ -28,3 +28,9 @@ describe("package identity", () => {
     }
   })
 })
+
+import plugin from "../src/index"
+
+test("plugin id is cronos", () => {
+  expect(plugin.id).toBe("cronos")
+})

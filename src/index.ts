@@ -611,7 +611,7 @@ function installBuiltinSkill(skill: BuiltinSkill, rootDir: string, overwrite = f
 }
 
 function loadPackageInfo(): { name: string; version: string } {
-  const fallback = { name: "opencode-scheduler", version: "unknown" }
+  const fallback = { name: "cronos", version: "unknown" }
   try {
     const packagePath = join(dirname(fileURLToPath(import.meta.url)), "..", "package.json")
     const raw = readFileSync(packagePath, "utf-8")
@@ -3541,7 +3541,7 @@ const JobLogsInput = {
 // === PLUGIN (V2) ===
 
 export default Plugin.define({
-  id: "opencode-scheduler",
+  id: "cronos",
   async setup(ctx) {
     if (ctx.location.directory) {
       DEFAULT_WORKDIR = ctx.location.directory

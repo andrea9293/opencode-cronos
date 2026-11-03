@@ -22871,7 +22871,7 @@ function installBuiltinSkill(skill, rootDir, overwrite = false) {
   return { directory: installDir, files };
 }
 function loadPackageInfo() {
-  const fallback = { name: "opencode-scheduler", version: "unknown" };
+  const fallback = { name: "cronos", version: "unknown" };
   try {
     const packagePath = join2(dirname(fileURLToPath(import.meta.url)), "..", "package.json");
     const raw = readFileSync(packagePath, "utf-8");
@@ -25100,7 +25100,7 @@ var JobLogsInput = {
   additionalProperties: false
 };
 var index_default = plugin_exports.define({
-  id: "opencode-scheduler",
+  id: "cronos",
   async setup(ctx) {
     if (ctx.location.directory) {
       DEFAULT_WORKDIR = ctx.location.directory;
