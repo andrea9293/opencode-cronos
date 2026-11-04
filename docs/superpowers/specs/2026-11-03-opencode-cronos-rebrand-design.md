@@ -5,23 +5,23 @@ Status: awaiting approval
 
 ## Intent
 
-The `andrea9293/cronos` fork is distributed via git only. Rename the plugin to
-**cronos** so the identity, links, and credits reflect the fork, without
+The `andrea9293/opencode-cronos` fork is distributed via git only. Rename the plugin to
+**opencode-cronos** so the identity, links, and credits reflect the fork, without
 pretending the original work is ours.
 
 ## Goals
 
-- `package.json`: `name` → `cronos`, `version` → `2.1.0`, `author` → Andrea
+- `package.json`: `name` → `opencode-cronos`, `version` → `2.1.0`, `author` → Andrea
   Bravaccino, `contributors` → Benjamin Shafii (with upstream URL),
-  `repository` / `bugs` / `homepage` → `andrea9293/cronos`.
-- `src/index.ts`: `Plugin.define({ id: "cronos" })` and the version-report
-  fallback name → `cronos`. Rebuild `dist/`.
-- README: title `# cronos`, install snippet key stays `cronos@git+…`, and a
+  `repository` / `bugs` / `homepage` → `andrea9293/opencode-cronos`.
+- `src/index.ts`: `Plugin.define({ id: "opencode-cronos" })` and the version-report
+  fallback name → `opencode-cronos`. Rebuild `dist/`.
+- README: title `# opencode-cronos`, install snippet key stays `opencode-cronos@git+…`, and a
   credit line at the top: fork of opencode-scheduler by Benjamin Shafii
   (Different AI), maintained by Andrea Bravaccino, link to upstream.
 - LICENSE: keep `Copyright (c) 2025 Different AI` and add
   `Copyright (c) 2026 Andrea Bravaccino`.
-- No npm publish: git specs (`cronos@git+https://github.com/andrea9293/cronos.git`)
+- No npm publish: git specs (`opencode-cronos@git+https://github.com/andrea9293/opencode-cronos.git`)
   are the only supported install path.
 
 ## Non-goals

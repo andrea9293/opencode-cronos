@@ -6,7 +6,7 @@ import { getBuiltinSkill, installBuiltinSkill } from "../src/index"
 
 describe("installBuiltinSkill", () => {
   test("creates the destination directory when it does not exist", () => {
-    const base = mkdtempSync(join(tmpdir(), "cronos-skill-"))
+    const base = mkdtempSync(join(tmpdir(), "opencode-cronos-skill-"))
     const target = join(base, "does", "not", "exist")
     try {
       expect(existsSync(target)).toBe(false)

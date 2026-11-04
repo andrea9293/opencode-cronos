@@ -1,4 +1,4 @@
-# cronos
+# opencode-cronos
 
 > Fork of [opencode-scheduler](https://github.com/different-ai/opencode-scheduler)
 > by Benjamin Shafii (Different AI), maintained by
@@ -20,11 +20,11 @@ Add to your `opencode.json`:
 
 ```json
 {
-  "plugins": ["cronos@git+https://github.com/andrea9293/cronos.git"]
+  "plugins": ["opencode-cronos@git+https://github.com/andrea9293/opencode-cronos.git"]
 }
 ```
 
-> Requires OpenCode `2.x` and `cronos` `2.1.x`.
+> Requires OpenCode `2.x` and `opencode-cronos` `2.2.x`.
 
 ## Examples
 
@@ -226,7 +226,7 @@ Install the scheduled job best practices skill
 
 This calls the plugin’s `install_skill` tool and writes `.agents/skills/scheduled-job-best-practices/SKILL.md`.
 
-(If you prefer, you can also say: `Get skill from cronos and add it to my skills`.)
+(If you prefer, you can also say: `Get skill from opencode-cronos and add it to my skills`.)
 
 Then add `@scheduled-job-best-practices` at the top of scheduled job prompts.
 
