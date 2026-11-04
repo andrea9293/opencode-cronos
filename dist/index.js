@@ -22742,7 +22742,7 @@ function errorResult(format5, output, data) {
 var SCHEDULED_JOB_BEST_PRACTICES_SKILL = {
   name: "scheduled-job-best-practices",
   description: "Patterns for resilient, non-interactive scheduled opencode jobs",
-  suggestedPath: ".opencode/skill/scheduled-job-best-practices/SKILL.md",
+  suggestedPath: ".agents/skills/scheduled-job-best-practices/SKILL.md",
   files: {
     "SKILL.md": `---
 name: scheduled-job-best-practices
@@ -25137,7 +25137,7 @@ var index_default = plugin_exports.define({
       });
       editor.add({
         name: "install_skill",
-        description: "Install a built-in skill into your repo's .opencode/skill directory.",
+        description: "Install a built-in skill into your repo's .agents/skills directory.",
         input: InstallSkillInput,
         async execute(input) {
           return { content: await handleInstallSkill(input) };

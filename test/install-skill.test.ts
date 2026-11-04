@@ -23,6 +23,12 @@ describe("installBuiltinSkill", () => {
     }
   })
 
+  test("defaults to the .agents/skills convention", () => {
+    const skill = getBuiltinSkill("scheduled-job-best-practices")
+    if (!skill) throw new Error("built-in skill missing")
+    expect(skill.suggestedPath.startsWith(".agents/skills/")).toBe(true)
+  })
+
   test("still rejects an empty directory", () => {
     const skill = getBuiltinSkill("scheduled-job-best-practices")
     if (!skill) throw new Error("built-in skill missing")

@@ -472,7 +472,7 @@ interface BuiltinSkill {
 const SCHEDULED_JOB_BEST_PRACTICES_SKILL: BuiltinSkill = {
   name: "scheduled-job-best-practices",
   description: "Patterns for resilient, non-interactive scheduled opencode jobs",
-  suggestedPath: ".opencode/skill/scheduled-job-best-practices/SKILL.md",
+  suggestedPath: ".agents/skills/scheduled-job-best-practices/SKILL.md",
   files: {
     "SKILL.md": `---
 name: scheduled-job-best-practices
@@ -3578,7 +3578,7 @@ export default Plugin.define({
       })
       editor.add({
         name: "install_skill",
-        description: "Install a built-in skill into your repo's .opencode/skill directory.",
+        description: "Install a built-in skill into your repo's .agents/skills directory.",
         input: InstallSkillInput,
         async execute(input: unknown) {
           return { content: await handleInstallSkill(input as InstallSkillArgs) }
